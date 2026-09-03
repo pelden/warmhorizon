@@ -1,1 +1,129 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Contact | Warm Horizon Care</title><link rel="stylesheet" href="style.css"></head><body><header><a class="brand" href="index.html">Warm Horizon <b>Care</b></a><nav><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="ndis.html">NDIS info</a></nav></header><main><section class="hero"><p>Contact us</p><h1>Start with a simple conversation.</h1></section><section><h2>Send an enquiry</h2><form id="contact-form" novalidate><label>Name *<input id="name" required></label><label>Email *<input id="email" type="email" required></label><label>Message *<textarea id="message" required></textarea></label><button class="button">Send enquiry</button><p id="status" role="status"></p></form><h2>Contact details</h2><p>Phone: <a href="tel:+61452586226">0452 586 226</a><br>Email: <a href="mailto:admin@warmhorizon.com.au">admin@warmhorizon.com.au</a><br>54A Chelsea Court, Dianella WA 6059</p><h2>Hours</h2><p>Monday to Friday, 9:00 am to 5:00 pm AWST.</p><p><strong>Emergency:</strong> Call 000 for immediate danger or a medical emergency.</p></section></main><footer><p>Warm Horizon Care | ABN 32 695 907 414</p></footer><script src="script.js"></script></body></html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Contact Us | Warm Horizon Care</title><meta name="description" content="Contact Warm Horizon Care for NDIS and aged care support in Perth."><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="components.css"></head><body><a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html"><span class="logo" aria-hidden="true">WH</span><span data-i18n="Warm Horizon Care">Warm Horizon Care</span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav">☰ Menu</button>
+    <nav id="main-nav" class="main-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html" data-i18n="Home">Home</a></li>
+        <li><a href="about.html" data-i18n="About">About</a></li>
+        <li><a href="services.html" data-i18n="Services">Services</a></li>
+        <li><a href="ndis.html" data-i18n="NDIS Info">NDIS Info</a></li>
+        <li><a href="resources.html" data-i18n="Resources">Resources</a></li>
+        <li><a href="blog/index.html" data-i18n="Blog">Blog</a></li>
+        <li><a href="portal.html" data-i18n="Client Portal">Client Portal</a></li>
+        <li><a href="contact.html" class="cta-btn" data-i18n="Contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <button class="a11y-btn" data-contrast aria-pressed="false" title="Toggle high contrast">◐ Contrast</button>
+      <button class="a11y-btn" data-largetext aria-pressed="false" title="Toggle large text">A+ Text</button>
+      <select class="lang-select" data-lang aria-label="Choose language">
+        <option value="en">EN</option>
+        <option value="ar">AR</option>
+      </select>
+    </div>
+  </div>
+</header>
+<main id="main"><nav class="breadcrumb container" aria-label="Breadcrumb"><a href="index.html">Home</a> / Contact</nav>
+<section class="hero"><div class="container reveal"><p class="eyebrow">Contact Us</p><h1>Start with a <em>simple conversation</em></h1></div></section>
+<section class="section"><div class="container" style="display:grid;gap:2rem;grid-template-columns:1.3fr .9fr">
+<div class="reveal">
+<h2>Send an enquiry</h2>
+<p>Fields marked * are required. Please do not include sensitive health details in this form.</p>
+<form id="contact-form" novalidate>
+  <div class="form-grid two-col">
+    <div><label for="name">Full name *</label><input id="name" data-required required><p class="field-error" id="name-error"></p></div>
+    <div><label for="email">Email address *</label><input id="email" type="email" data-required required><p class="field-error" id="email-error"></p></div>
+  </div>
+  <div class="form-grid two-col">
+    <div><label for="phone">Phone number</label><input id="phone" type="tel"></div>
+    <div><label for="service">Service of interest</label>
+      <select id="service"><option value="">Please choose</option>
+        <option>Personal Care</option><option>Community Participation</option><option>In-Home Support</option>
+        <option>Support Coordination</option><option>Transport Support</option><option>Capacity Building</option><option>Something else</option>
+      </select>
+    </div>
+  </div>
+  <label for="message">Message *</label>
+  <textarea id="message" rows="5" data-required required></textarea><p class="field-error" id="message-error"></p>
+  <div class="checkbox-row"><input id="consent" type="checkbox" data-required required><label for="consent">I agree Warm Horizon Care can use these details to respond to my enquiry. *</label></div>
+  <p class="field-error" id="consent-error"></p>
+  <div class="honeypot"><label for="company">Company</label><input id="company" name="company" tabindex="-1" autocomplete="off"></div>
+  <button class="cta-btn" type="submit">Send enquiry</button>
+  <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+</form>
+</div>
+<aside class="reveal">
+<div class="trust-item"><h2>Call or email</h2><p><a href="tel:+61452586226">0452 586 226</a><br><a href="mailto:admin@warmhorizon.com.au">admin@warmhorizon.com.au</a></p></div>
+<div class="trust-item" style="margin-top:1rem"><h2>Operating hours</h2><p>Monday–Friday, 9:00 am–5:00 pm AWST. Appointments by arrangement.</p></div>
+<div class="trust-item" style="margin-top:1rem"><h2>Visit us</h2><p>54A Chelsea Court, Dianella WA 6059</p>
+<div style="background:#eef6f2;padding:1rem;border-radius:8px" role="img" aria-label="Map placeholder for 54A Chelsea Court, Dianella WA 6059">Map embed placeholder — replace with an accessible Google Maps/OpenStreetMap iframe.</div>
+</div>
+</aside>
+</div></section>
+<section id="complaints" class="section section-tint reveal"><div class="container">
+<h2>Feedback and complaints</h2>
+<p>You can raise a concern with us by phone, email or in person. If you're not comfortable doing so, contact the NDIS Quality and Safeguards Commission on <a href="tel:1800035544">1800 035 544</a>.</p>
+<div class="trust-item"><strong>Emergency:</strong> for immediate danger or a medical emergency, call <a href="tel:000">000</a>. This form is not monitored for emergencies.</div>
+</div></section>
+<script>
+document.getElementById('contact-form').addEventListener('submit', e=>{
+  e.preventDefault();
+  const ok = validateForm(e.target);
+  const status = document.getElementById('form-status');
+  if(ok){ status.textContent='Thank you. Connect this form to Formspree, Netlify Forms, or a serverless function to receive submissions (see DEPLOY.md).'; e.target.reset(); }
+  else { status.textContent='Please review the highlighted fields.'; }
+});
+</script>
+</main><footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <a class="brand" href="index.html" style="color:#fff"><span class="logo" aria-hidden="true">WH</span><span>Warm Horizon Care</span></a>
+      <p>NDIS and aged care support across Perth and regional WA.</p>
+      <div class="social-row">
+        <a href="#" aria-label="Facebook">f</a>
+        <a href="#" aria-label="LinkedIn">in</a>
+        <a href="#" aria-label="Instagram">◎</a>
+      </div>
+    </div>
+    <div>
+      <h2>Contact</h2>
+      <nav aria-label="Contact details">
+        <a href="tel:+61452586226">0452 586 226</a>
+        <a href="mailto:admin@warmhorizon.com.au">admin@warmhorizon.com.au</a>
+        <span>54A Chelsea Court, Dianella WA 6059</span>
+      </nav>
+    </div>
+    <div>
+      <h2>Quick Links</h2>
+      <nav>
+        <a href="services.html">Services</a>
+        <a href="ndis.html">NDIS Info</a>
+        <a href="resources.html">Resources</a>
+        <a href="contact.html#complaints">Feedback &amp; Complaints</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="accessibility.html">Accessibility Statement</a>
+      </nav>
+    </div>
+    <div>
+      <h2>Legal</h2>
+      <p>Kenchosum Kheno Ventures Pty Ltd<br>trading as Warm Horizon Care</p>
+      <p>ABN: 32 695 907 414<br>NDIS Provider No.: [Insert NDIS registration number]</p>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>© <span data-year></span> Warm Horizon Care. All rights reserved.</p>
+    <p class="disclaimer">Warm Horizon Care is an independent NDIS provider. The NDIS is administered by the National Disability Insurance Agency (NDIA). This website does not constitute funding, eligibility or medical advice.</p>
+  </div>
+</footer>
+<div class="cookie-banner" role="region" aria-label="Cookie consent">
+  <p>We use minimal cookies to remember your accessibility preferences and understand site usage. See our <a href="privacy.html">Privacy Policy</a>.</p>
+  <div class="cookie-actions">
+    <button data-cookie-decline>Decline</button>
+    <button class="accept" data-cookie-accept>Accept</button>
+  </div>
+</div>
+<script src="script.js"></script>
+</body></html>

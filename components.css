@@ -1,0 +1,15 @@
+/* Reusable components layer (loaded after style.css) */
+.portal-mock{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:1.4rem;box-shadow:var(--shadow)}
+.portal-tabs{display:flex;gap:.5rem;border-bottom:1px solid var(--line);margin-bottom:1rem;flex-wrap:wrap}
+.portal-tabs button{background:none;border:none;padding:.6rem .9rem;font-weight:800;cursor:pointer;border-bottom:3px solid transparent}
+.portal-tabs button[aria-selected="true"]{border-color:var(--green);color:var(--green-dark)}
+.portal-panel{display:none}
+.portal-panel.active{display:block}
+.progress-bar{background:var(--tint);border-radius:20px;height:12px;overflow:hidden}
+.progress-bar span{display:block;height:100%;background:var(--green)}
+.doc-list{list-style:none;padding:0}
+.doc-list li{display:flex;justify-content:space-between;align-items:center;padding:.7rem 0;border-bottom:1px solid var(--line)}
+.vcard-btn{font-size:.8rem;padding:.3rem .6rem;border-radius:6px;border:1px solid var(--green);color:var(--green-dark);background:transparent;font-weight:700;text-decoration:none}
+.checklist-print{list-style:none;padding:0}
+.checklist-print li{display:flex;gap:.6rem;padding:.5rem 0;border-bottom:1px dashed var(--line)}
+@media print{header,footer,.no-print{display:none!important}}

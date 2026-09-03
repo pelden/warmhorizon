@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>About Us | Warm Horizon Care</title><meta name="description" content="Mission, vision, values and NDIS compliance commitments of Warm Horizon Care."><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="components.css"></head><body><a class="skip-link" href="#main">Skip to main content</a>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Client Portal Preview | Warm Horizon Care</title><meta name="description" content="Front-end mock-up of a participant portal experience."><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="components.css"></head><body><a class="skip-link" href="#main">Skip to main content</a>
 <header class="site-header">
   <div class="container header-inner">
     <a class="brand" href="index.html"><span class="logo" aria-hidden="true">WH</span><span data-i18n="Warm Horizon Care">Warm Horizon Care</span></a>
@@ -25,28 +25,47 @@
     </div>
   </div>
 </header>
-<main id="main"><nav class="breadcrumb container" aria-label="Breadcrumb"><a href="index.html">Home</a> / About</nav>
-<section class="hero"><div class="container reveal"><p class="eyebrow">About Us</p><h1>Genuine relationships, <em>not just tasks</em></h1><p class="lead">Warm Horizon Care exists to support people with disability and older Western Australians to live with dignity, choice and connection.</p></div></section>
-<section class="section"><div class="container three-col reveal" style="display:grid;gap:1.2rem" >
-  <div><p class="eyebrow">Mission</p><h2>To make support feel human</h2><p>We work alongside participants to pursue goals, strengthen independence and stay connected to what matters most.</p></div>
-  <div><p class="eyebrow">Vision</p><h2>Communities where everyone belongs</h2><p>We envision inclusive WA communities where people have real choice, valued roles and support to live life their own way.</p></div>
-  <div><p class="eyebrow">Values</p><h2>Respect, partnership, reliability</h2><p>Every interaction is guided by dignity, transparency and accountability to the people we support.</p></div>
-</div></section>
-<section class="section section-tint"><div class="container reveal"><p class="eyebrow">NDIS Compliance Commitments</p><h2>Our commitment to safe, ethical support</h2><p>Warm Horizon Care is committed to upholding the NDIS Code of Conduct: respecting individual rights, providing safe and competent supports, acting with integrity, and responding openly to feedback and concerns.</p><ul>
-<li>NDIS Provider Number: [Insert once registered/verified]</li>
-<li>Worker screening and induction records maintained for all staff</li>
-<li>Incident management and complaints handling procedures in place</li>
-<li>Regular service agreement reviews with each participant</li>
-</ul></div></section>
-<section class="section"><div class="container">
-<div class="reveal text-center"><p class="eyebrow">Our Team</p><h2>People accountable for our direction</h2></div>
-<div class="card-grid" style="margin-top:1.5rem">
-<article class="card reveal"><img src="images/placeholder-staff-1.svg" alt="Placeholder photo of Pelden Choeda, Managing Director" width="96" height="96" style="border-radius:50%"><h3>Pelden Choeda</h3><p>Managing Director</p><p>Leads operations, governance and the organisation's participant-centred culture.</p></article>
-<article class="card reveal"><img src="images/placeholder-staff-2.svg" alt="Placeholder photo of Jigme Phuntsho, Board Director" width="96" height="96" style="border-radius:50%"><h3>Jigme Phuntsho</h3><p>Board Director</p><p>Contributes to strategic oversight and accountable decision-making.</p></article>
-<article class="card reveal"><img src="images/placeholder-staff-3.svg" alt="Placeholder photo of Tenzin Wangdi, Board Director" width="96" height="96" style="border-radius:50%"><h3>Tenzin Wangdi</h3><p>Board Director</p><p>Supports long-term vision, integrity and community focus.</p></article>
+<main id="main"><nav class="breadcrumb container" aria-label="Breadcrumb"><a href="index.html">Home</a> / Client Portal</nav>
+<section class="hero"><div class="container reveal"><p class="eyebrow">Client Portal (Preview / Mock-up)</p><h1>See how participants could manage support online</h1><p class="lead">This is a front-end mock-up using sample data only. No real login, personal data or backend is connected.</p></div></section>
+<section class="section"><div class="container reveal">
+<div class="portal-mock">
+  <div role="tablist" class="portal-tabs">
+    <button role="tab" aria-selected="true" data-tab="plan">My Plan</button>
+    <button role="tab" aria-selected="false" data-tab="services">My Services</button>
+    <button role="tab" aria-selected="false" data-tab="requests">Request Support</button>
+  </div>
+  <div class="portal-panel active" id="tab-plan">
+    <h2>Plan overview (sample data)</h2>
+    <p>Plan period: 1 Jan 2026 – 31 Dec 2026</p>
+    <p>Core Supports budget used: 42%</p>
+    <div class="progress-bar"><span style="width:42%"></span></div>
+  </div>
+  <div class="portal-panel" id="tab-services">
+    <h2>Active services (sample data)</h2>
+    <ul><li>Personal Care — Tuesdays &amp; Fridays</li><li>Community Participation — Wednesdays</li></ul>
+  </div>
+  <div class="portal-panel" id="tab-requests">
+    <h2>Request additional support</h2>
+    <form onsubmit="event.preventDefault(); document.getElementById('portal-status').textContent='Sample request submitted (not sent anywhere — this is a mock-up).';">
+      <label for="req-service">Service</label>
+      <select id="req-service"><option>Transport Support</option><option>Capacity Building</option></select>
+      <button class="cta-btn" style="margin-top:.8rem" type="submit">Submit request</button>
+      <p id="portal-status" role="status"></p>
+    </form>
+  </div>
 </div>
-<p class="text-center" style="margin-top:1rem"><a href="staff-directory.html">View full staff directory →</a></p>
+<p style="margin-top:1rem">Sample data source: <a href="data/portal-sample.json">data/portal-sample.json</a>. See README.md for how to connect a real backend.</p>
 </div></section>
+<script>
+document.querySelectorAll('.portal-tabs button').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    document.querySelectorAll('.portal-tabs button').forEach(b=>b.setAttribute('aria-selected','false'));
+    document.querySelectorAll('.portal-panel').forEach(p=>p.classList.remove('active'));
+    btn.setAttribute('aria-selected','true');
+    document.getElementById('tab-'+btn.dataset.tab).classList.add('active');
+  });
+});
+</script>
 </main><footer class="site-footer">
   <div class="container footer-grid">
     <div>

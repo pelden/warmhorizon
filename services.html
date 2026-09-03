@@ -1,1 +1,89 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Services | Warm Horizon Care</title><link rel="stylesheet" href="style.css"></head><body><header><a class="brand" href="index.html">Warm Horizon <b>Care</b></a><nav><a href="index.html">Home</a><a href="about.html">About</a><a href="ndis.html">NDIS info</a><a href="contact.html">Contact</a></nav></header><main><section class="hero"><p>Our services</p><h1>Practical support for a life you choose.</h1></section><section><article><h2>Support coordination</h2><p>Understand your plan, connect with providers and make informed choices.</p><h3>Benefits</h3><p>Clear information, stronger connections and help navigating change.</p><h3>Eligibility</h3><p>Usually requires Support Coordination funding in your plan.</p><h3>How it works</h3><p>We discuss goals, identify options and review progress together.</p></article><article><h2>Plan management</h2><p>Help with invoices, budgets and funding visibility.</p></article><article><h2>Community participation</h2><p>Support to build skills, relationships and community connection.</p></article><article><h2>Daily living support</h2><p>Flexible assistance with everyday routines at home.</p></article><article><h2>SIL / SDA</h2><p>Placeholder: specialist support and accommodation pathways.</p></article><article><h2>Transport assistance</h2><p>Support to travel to agreed appointments and activities.</p></article></section></main><footer><p>Warm Horizon Care | ABN 32 695 907 414</p></footer></body></html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Services | Warm Horizon Care</title><meta name="description" content="Searchable directory of NDIS and aged care services offered by Warm Horizon Care."><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="components.css"></head><body><a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html"><span class="logo" aria-hidden="true">WH</span><span data-i18n="Warm Horizon Care">Warm Horizon Care</span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav">☰ Menu</button>
+    <nav id="main-nav" class="main-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html" data-i18n="Home">Home</a></li>
+        <li><a href="about.html" data-i18n="About">About</a></li>
+        <li><a href="services.html" data-i18n="Services">Services</a></li>
+        <li><a href="ndis.html" data-i18n="NDIS Info">NDIS Info</a></li>
+        <li><a href="resources.html" data-i18n="Resources">Resources</a></li>
+        <li><a href="blog/index.html" data-i18n="Blog">Blog</a></li>
+        <li><a href="portal.html" data-i18n="Client Portal">Client Portal</a></li>
+        <li><a href="contact.html" class="cta-btn" data-i18n="Contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <button class="a11y-btn" data-contrast aria-pressed="false" title="Toggle high contrast">◐ Contrast</button>
+      <button class="a11y-btn" data-largetext aria-pressed="false" title="Toggle large text">A+ Text</button>
+      <select class="lang-select" data-lang aria-label="Choose language">
+        <option value="en">EN</option>
+        <option value="ar">AR</option>
+      </select>
+    </div>
+  </div>
+</header>
+<main id="main"><nav class="breadcrumb container" aria-label="Breadcrumb"><a href="index.html">Home</a> / Services</nav>
+<section class="hero"><div class="container reveal"><p class="eyebrow">Our Services</p><h1>Practical support for the life <em>you choose</em></h1><p class="lead">Use the filters below to find services by type, location or eligibility, or browse each detailed service page.</p></div></section>
+<section class="section"><div class="container">
+<div class="filters reveal">
+  <input type="search" id="svc-search" placeholder="Search services…" aria-label="Search services">
+  <select id="svc-category" aria-label="Filter by category"><option value="">All categories</option></select>
+  <select id="svc-location" aria-label="Filter by location"><option value="">All locations</option></select>
+</div>
+<div class="card-grid" id="svc-results"></div>
+</div></section>
+<script src="js-services.js" defer></script>
+</main><footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <a class="brand" href="index.html" style="color:#fff"><span class="logo" aria-hidden="true">WH</span><span>Warm Horizon Care</span></a>
+      <p>NDIS and aged care support across Perth and regional WA.</p>
+      <div class="social-row">
+        <a href="#" aria-label="Facebook">f</a>
+        <a href="#" aria-label="LinkedIn">in</a>
+        <a href="#" aria-label="Instagram">◎</a>
+      </div>
+    </div>
+    <div>
+      <h2>Contact</h2>
+      <nav aria-label="Contact details">
+        <a href="tel:+61452586226">0452 586 226</a>
+        <a href="mailto:admin@warmhorizon.com.au">admin@warmhorizon.com.au</a>
+        <span>54A Chelsea Court, Dianella WA 6059</span>
+      </nav>
+    </div>
+    <div>
+      <h2>Quick Links</h2>
+      <nav>
+        <a href="services.html">Services</a>
+        <a href="ndis.html">NDIS Info</a>
+        <a href="resources.html">Resources</a>
+        <a href="contact.html#complaints">Feedback &amp; Complaints</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="accessibility.html">Accessibility Statement</a>
+      </nav>
+    </div>
+    <div>
+      <h2>Legal</h2>
+      <p>Kenchosum Kheno Ventures Pty Ltd<br>trading as Warm Horizon Care</p>
+      <p>ABN: 32 695 907 414<br>NDIS Provider No.: [Insert NDIS registration number]</p>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>© <span data-year></span> Warm Horizon Care. All rights reserved.</p>
+    <p class="disclaimer">Warm Horizon Care is an independent NDIS provider. The NDIS is administered by the National Disability Insurance Agency (NDIA). This website does not constitute funding, eligibility or medical advice.</p>
+  </div>
+</footer>
+<div class="cookie-banner" role="region" aria-label="Cookie consent">
+  <p>We use minimal cookies to remember your accessibility preferences and understand site usage. See our <a href="privacy.html">Privacy Policy</a>.</p>
+  <div class="cookie-actions">
+    <button data-cookie-decline>Decline</button>
+    <button class="accept" data-cookie-accept>Accept</button>
+  </div>
+</div>
+<script src="script.js"></script>
+</body></html>

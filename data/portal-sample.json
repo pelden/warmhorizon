@@ -1,0 +1,6 @@
+{
+  "participant": "Sample Participant",
+  "planPeriod": "2026-01-01 to 2026-12-31",
+  "budgetUsedPercent": 42,
+  "activeServices": ["Personal Care", "Community Participation"]
+}

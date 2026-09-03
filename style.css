@@ -1,1 +1,143 @@
- :root{--green:#075e55;--dark:#142729;--cream:#fffdf8;--tint:#edf6f2;--orange:#dd7d44}*{box-sizing:border-box}body{margin:0;font:17px/1.6 Arial,sans-serif;color:var(--dark);background:var(--cream)}a{color:var(--green);font-weight:bold}header{position:sticky;top:0;background:#fffdf8;border-bottom:1px solid #cbd8d4;min-height:70px;padding:12px 5%;display:flex;align-items:center;gap:24px;z-index:5}.brand{text-decoration:none;color:var(--dark);font-size:20px}.brand b{color:var(--green)}nav{margin-left:auto;display:flex;gap:18px;flex-wrap:wrap}nav a{text-decoration:none}.hero,section{padding:55px max(5%,calc((100% - 1080px)/2))}.hero{background:linear-gradient(120deg,#e7f4ef,#fff4ea)}h1{font-size:clamp(2.3rem,6vw,4.5rem);line-height:1.08;margin:.2em 0;max-width:850px}h2{font-size:clamp(1.7rem,4vw,2.5rem)}.button{display:inline-block;background:var(--green);color:white;border:2px solid var(--green);border-radius:6px;padding:12px 18px;text-decoration:none;margin-top:12px;font-weight:bold}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px}article,.grid article{background:white;padding:22px;border:1px solid #cadbd6;border-radius:10px;margin:16px 0}.tint{background:var(--tint)}footer{background:var(--dark);color:white;padding:28px 5%}label{display:block;font-weight:bold;margin:15px 0}input,textarea{width:100%;padding:10px;border:1px solid #718782;border-radius:5px;font:inherit}textarea{min-height:130px}button.button{font:inherit;cursor:pointer}.skip{position:absolute;left:-999px}.skip:focus{left:10px;top:10px;background:white;padding:10px;z-index:10}@media(max-width:650px){header{flex-wrap:wrap}#menu{display:block}nav{width:100%;display:none}nav.open{display:flex;flex-direction:column}h1{font-size:2.5rem}}@media(min-width:651px){#menu{display:none}}
+/* ===== Warm Horizon Care — Design Tokens & Base ===== */
+:root{
+  --green:#0b5e52; --green-dark:#083f38; --orange:#d97a3f; --ink:#182524; --muted:#57696a;
+  --bg:#fbfaf6; --tint:#eef6f2; --line:#d8e3de; --white:#fff;
+  --radius:10px; --shadow:0 12px 30px rgba(15,45,40,.12);
+  --font:'Segoe UI',system-ui,Arial,sans-serif;
+  font-size:16px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--font);color:var(--ink);background:var(--bg);line-height:1.6}
+body.large-text{font-size:19px}
+body.high-contrast{--ink:#000;--muted:#111;--green:#00453d;--bg:#fff;--tint:#eaf5f0;--line:#333}
+a{color:var(--green-dark);text-decoration:underline;font-weight:600}
+img{max-width:100%;display:block}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.skip-link{position:absolute;left:-999px;top:0;background:#000;color:#fff;padding:.6rem 1rem;z-index:200}
+.skip-link:focus{left:1rem;top:1rem}
+:focus-visible{outline:3px solid var(--orange);outline-offset:2px}
+.container{width:min(1140px,92%);margin:0 auto}
+
+/* Header */
+.site-header{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);z-index:100}
+.header-inner{display:flex;align-items:center;gap:1rem;padding:.8rem 0;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:var(--ink);font-weight:800}
+.brand .logo{width:40px;height:40px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;font-size:.8rem}
+.nav-toggle{margin-left:auto;background:none;border:2px solid var(--green);border-radius:6px;padding:.4rem .7rem;font-weight:700}
+.main-nav{display:none;width:100%}
+.main-nav.open{display:block}
+.main-nav ul{list-style:none;display:flex;flex-direction:column;padding:0;margin:.5rem 0}
+.main-nav a{display:block;padding:.6rem 0;text-decoration:none;color:var(--ink);font-weight:700}
+.header-actions{display:flex;gap:.4rem}
+.a11y-btn{border:1px solid var(--line);background:var(--white);border-radius:6px;padding:.35rem .6rem;font-weight:700;cursor:pointer}
+.lang-select{border:1px solid var(--line);border-radius:6px;padding:.35rem;font-weight:700}
+@media(min-width:900px){
+  .nav-toggle{display:none}
+  .main-nav{display:block;width:auto;margin-left:1rem}
+  .main-nav ul{flex-direction:row;gap:1.2rem}
+  .header-actions{margin-left:auto}
+}
+.cta-btn{background:var(--green);color:#fff!important;border:2px solid var(--green);padding:.55rem 1rem;border-radius:8px;font-weight:800;text-decoration:none;display:inline-block}
+.cta-btn:hover{background:var(--green-dark);border-color:var(--green-dark)}
+.cta-btn.outline{background:transparent;color:var(--green-dark)!important}
+
+/* Breadcrumb */
+.breadcrumb{font-size:.85rem;padding:.8rem 0;color:var(--muted)}
+.breadcrumb a{color:var(--muted);text-decoration:none;font-weight:600}
+.breadcrumb a:hover{text-decoration:underline}
+
+/* Hero */
+.hero{background:linear-gradient(120deg,var(--tint),#fdf1e6);padding:3.5rem 0}
+.hero h1{font-size:clamp(2rem,5vw,3.4rem);margin:.2rem 0 1rem;max-width:760px}
+.hero p.lead{font-size:1.1rem;color:var(--muted);max-width:620px}
+.hero-ctas{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.4rem}
+
+/* Sections */
+.section{padding:3.2rem 0}
+.section-tint{background:var(--tint)}
+.section h2{font-size:clamp(1.6rem,4vw,2.3rem);margin-top:0}
+.eyebrow{text-transform:uppercase;letter-spacing:.08em;font-size:.75rem;font-weight:800;color:var(--orange)}
+
+/* Cards / Grid */
+.card-grid{display:grid;grid-template-columns:1fr;gap:1.1rem}
+@media(min-width:700px){.card-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.card-grid{grid-template-columns:repeat(3,1fr)}}
+.card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:1.4rem;box-shadow:0 1px 0 rgba(0,0,0,.02);transition:.2s}
+.card:hover{box-shadow:var(--shadow);transform:translateY(-3px)}
+.card .icon{font-size:1.8rem}
+.card h3{margin:.5rem 0}
+.card a{font-size:.9rem}
+
+/* Trust grid */
+.trust-grid{display:grid;grid-template-columns:1fr;gap:1rem}
+@media(min-width:700px){.trust-grid{grid-template-columns:repeat(3,1fr)}}
+.trust-item{background:var(--white);border-radius:var(--radius);padding:1.2rem;border:1px solid var(--line)}
+
+/* Testimonials */
+.testimonial-carousel{position:relative;background:var(--green-dark);color:#fff;border-radius:var(--radius);padding:2rem;max-width:760px;margin:0 auto}
+.t-slide{display:none}
+.t-slide.active{display:block}
+.t-slide blockquote{font-size:1.2rem;margin:0 0 1rem}
+.t-controls{display:flex;justify-content:center;gap:1rem;margin-top:1rem}
+.t-controls button{background:transparent;border:1px solid #fff;color:#fff;border-radius:6px;padding:.3rem .7rem;cursor:pointer}
+
+/* Filters / directory */
+.filters{display:grid;gap:.7rem;margin-bottom:1.4rem}
+@media(min-width:700px){.filters{grid-template-columns:repeat(3,1fr)}}
+.filters input,.filters select{width:100%;padding:.6rem;border:1px solid var(--line);border-radius:6px;font:inherit}
+.service-card p.meta{font-size:.85rem;color:var(--muted)}
+
+/* Accordion / FAQ */
+.accordion-item{border-bottom:1px solid var(--line)}
+.accordion-item button{width:100%;text-align:left;background:none;border:none;padding:1rem 0;font-weight:800;font-size:1rem;display:flex;justify-content:space-between;cursor:pointer;color:var(--ink)}
+.accordion-panel{display:none;padding:0 0 1rem;color:var(--muted)}
+.accordion-item.open .accordion-panel{display:block}
+.accordion-item.open button .chevron{transform:rotate(180deg)}
+.chevron{transition:.2s}
+
+/* Forms */
+.form-grid{display:grid;gap:1rem}
+@media(min-width:700px){.form-grid.two-col{grid-template-columns:1fr 1fr}}
+label{display:block;font-weight:700;margin-bottom:.35rem}
+input,select,textarea{width:100%;padding:.65rem;border:1px solid #94a5a1;border-radius:6px;font:inherit;background:#fff;color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:3px solid var(--orange)}
+.field-error{color:#a02020;font-size:.85rem;min-height:1.1em;font-weight:700}
+.checkbox-row{display:flex;gap:.5rem;align-items:flex-start}
+.checkbox-row input{width:auto;margin-top:.3rem}
+.honeypot{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+.form-status{font-weight:800;margin-top:1rem}
+
+/* Modal */
+.modal-overlay{position:fixed;inset:0;background:rgba(10,20,18,.55);display:none;align-items:center;justify-content:center;z-index:300;padding:1rem}
+.modal-overlay.open{display:flex}
+.modal{background:#fff;border-radius:var(--radius);padding:1.6rem;max-width:520px;width:100%;box-shadow:var(--shadow)}
+.modal-close{float:right;background:none;border:none;font-size:1.3rem;cursor:pointer}
+
+/* Cookie banner */
+.cookie-banner{position:fixed;bottom:0;left:0;right:0;background:var(--green-dark);color:#fff;padding:1rem;display:none;z-index:400;gap:1rem;flex-wrap:wrap;align-items:center}
+.cookie-banner.show{display:flex}
+.cookie-banner p{margin:0;flex:1;min-width:220px;font-size:.9rem}
+.cookie-actions{display:flex;gap:.6rem}
+.cookie-actions button{border-radius:6px;padding:.5rem 1rem;font-weight:800;border:1px solid #fff;background:transparent;color:#fff;cursor:pointer}
+.cookie-actions button.accept{background:#fff;color:var(--green-dark)}
+
+/* Footer */
+.site-footer{background:var(--green-dark);color:#dfeee9;padding:2.6rem 0 1.2rem;margin-top:2rem}
+.footer-grid{display:grid;gap:1.6rem}
+@media(min-width:800px){.footer-grid{grid-template-columns:2fr 1fr 1fr 1fr}}
+.site-footer h2{font-size:.85rem;text-transform:uppercase;letter-spacing:.08em;color:#fff}
+.site-footer a{color:#fff;text-decoration:none;font-weight:600}
+.site-footer nav{display:flex;flex-direction:column;gap:.4rem}
+.social-row{display:flex;gap:.6rem;margin-top:.5rem}
+.social-row a{border:1px solid #4d746c;border-radius:50%;width:34px;height:34px;display:grid;place-items:center}
+.footer-bottom{border-top:1px solid #315a52;margin-top:1.6rem;padding-top:1rem;font-size:.8rem;text-align:center}
+.disclaimer{font-size:.75rem;color:#b9d3cb;max-width:900px;margin:.4rem auto 0}
+
+/* Utility */
+.text-center{text-align:center}
+.mt-0{margin-top:0}
+.reveal{opacity:0;transform:translateY(14px);transition:.5s}
+.reveal.visible{opacity:1;transform:none}
+.badge{display:inline-block;background:var(--tint);color:var(--green-dark);border-radius:20px;padding:.2rem .7rem;font-size:.75rem;font-weight:800;margin:.15rem}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
